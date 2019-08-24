@@ -3,6 +3,6 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="box_red">#800000</color>
-    <color name="box_green">#0A6E0A</color>
+    <color name="box_red">#E74C60</color>
+    <color name="box_green">#FA48B162</color>
 </resources>
