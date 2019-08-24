@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Parking</string>
+    <string name="box_one">available</string>
+    <string name="box_two">available</string>
+    <string name="box_three">available</string>
+    <string name="btn_del">DELETE</string>
+    <string name="btn_updae">UPDATE</string>
+    <string name="tf_license_plate">license plate</string>
+    <string name="tf_brand">brand</string>
+    <string name="tf_name">name</string>
 </resources>

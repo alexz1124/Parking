@@ -1,19 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="MyCar"
+                type="buu.informatics.s59160129.parking.MyCar" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#AE8F34"
+            tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:id="@+id/status_two"
+                style="@style/box_status"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/box_two"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_status"
+                app:layout_constraintBottom_toBottomOf="@+id/status_one"
+                app:layout_constraintEnd_toStartOf="@+id/status_three"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/status_one"
+                app:layout_constraintTop_toTopOf="@+id/status_one"
+                app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:id="@+id/status_one"
+                style="@style/box_status"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/box_one"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/status_two"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.035" />
+
+        <TextView
+                android:id="@+id/status_three"
+                style="@style/box_status"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:text="@string/box_three"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_status"
+                app:layout_constraintBottom_toBottomOf="@+id/status_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/status_two"
+                app:layout_constraintTop_toTopOf="@+id/status_two"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+                android:id="@+id/btn_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="136dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/btn_del"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/btn_updae"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_del"
+                app:layout_constraintStart_toEndOf="@+id/btn_del"
+                app:layout_constraintTop_toTopOf="@+id/btn_del" />
+
+        <EditText
+                android:id="@+id/text_1"
+                style="@style/text_field"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="@string/tf_license_plate"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/text_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/status_two" />
+
+        <EditText
+                android:id="@+id/text_2"
+                style="@style/text_field"
+                android:autoText="false"
+                android:ems="10"
+                android:hint="@string/tf_brand"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/text_3"
+                app:layout_constraintEnd_toEndOf="@+id/text_1"
+                app:layout_constraintStart_toStartOf="@+id/text_1"
+                app:layout_constraintTop_toBottomOf="@+id/text_1" />
+
+        <EditText
+                android:id="@+id/text_3"
+                style="@style/text_field"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="@string/tf_name"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/btn_del"
+                app:layout_constraintEnd_toEndOf="@+id/text_2"
+                app:layout_constraintStart_toStartOf="@+id/text_2"
+                app:layout_constraintTop_toBottomOf="@+id/text_2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
